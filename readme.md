@@ -20,7 +20,17 @@ Create a `.env` file in the root directory and add your Hugging Face API token:
 HF_TOKEN=your_huggingface_token_here
 ```
 
-You can get a free token from [Hugging Face](https://huggingface.co/settings/tokens).
+To generate a token:
+
+1. Sign in to [Hugging Face](https://huggingface.co/).
+2. Open [Settings > Access Tokens](https://huggingface.co/settings/tokens).
+3. Click **Create new token**, enter a name, and select the permissions needed for inference.
+4. Create the token and copy it immediately. Hugging Face will not show the full token again.
+5. Paste it into `.env` as the value of `HF_TOKEN`.
+
+![Hugging Face token generation steps](public/images/hf_token_gen_steps.png)
+
+Keep your token private. Do not commit `.env`, expose the token in frontend code, or share it publicly.
 
 ### 3. Start the Backend Server
 
