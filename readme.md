@@ -1,6 +1,6 @@
 # AI Chatbot
 
-A simple chatbot application that uses the Hugging Face API to generate AI responses. Perfect for learning full-stack web development!
+A simple chatbot application that uses the Groq API to generate AI responses. Perfect for learning full-stack web development!
 
 ## 🚀 How to Run the Project
 
@@ -14,23 +14,23 @@ npm install
 
 ### 2. Set Up Environment Variables
 
-Create a `.env` file in the root directory and add your Hugging Face API token:
+Create a `.env` file in the root directory and add your Groq API token:
 
 ```
-HF_TOKEN=your_huggingface_token_here
+GROQ_API_KEY=your_groq_token_here
 ```
 
 To generate a token:
 
-1. Sign in to [Hugging Face](https://huggingface.co/).
-2. Open [Settings > Access Tokens](https://huggingface.co/settings/tokens).
-3. Click **Create new token**, enter a name, and select the permissions needed for inference.
-4. Create the token and copy it immediately. Hugging Face will not show the full token again.
-5. Paste it into `.env` as the value of `HF_TOKEN`.
+1. Sign in to [Groq](https://console.groq.com).
+2. Open [API Keys](https://console.groq.com/keys).
+3. Click **Create API Key** and enter a name.
+4. Create the key and copy it immediately. Groq will not show the full token again.
+5. Paste it into `.env` as the value of `GROQ_API_KEY`.
 
-![Hugging Face token generation steps](public/images/hf_token_gen_steps.png)
+![Groq key generation steps](public/images/groq-key-gen-steps.png)
 
-Keep your token private. Do not commit `.env`, expose the token in frontend code, or share it publicly.
+Keep your key private. Do not commit `.env`, expose the token in frontend code, or share it publicly.
 
 ### 3. Start the Backend Server
 
@@ -76,7 +76,7 @@ chatbot-project/
 ### Backend
 - **Node.js** - Runtime environment
 - **Express.js** - Web server framework
-- **Hugging Face API** - AI model integration
+- **Groq API** - AI model integration
 
 ---
 
@@ -84,7 +84,7 @@ chatbot-project/
 
 1. **User types a message** in the input field and clicks Send
 2. **Frontend sends the message** to the backend via a POST request
-3. **Backend forwards the request** to Hugging Face API
+3. **Backend forwards the request** to Groq API
 4. **AI generates a response** which is sent back to the frontend
 5. **Response is displayed** in the chat interface
 
